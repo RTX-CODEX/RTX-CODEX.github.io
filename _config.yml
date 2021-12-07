@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: RTX CODEX Cyber Blogs
+title: RTX CODEX Cyber Blog
 email:  
 description: >- # this means to ignore newlines until "baseurl:"
-        Raytheon Technologies’ CODEX division, short for Cyber Offense & Defense Experts, brings together an elite team of mission-focused industry experts—known for their ability to overcome the most advanced technical challenges. The team comprises engineers of multiple disciplines, including vulnerability research, reverse engineering Computer Network Operations/Computer Network Exploitation development, hardware emulation, system engineering, data analytics, test engineering and more. We work on an array of technologies including the latest mobile platforms, operating systems, embedded devices, and the newest data analytic platforms. Key to our success are subject matter experts capable of operationalizing fundamental computer and software engineering concepts.
+        Raytheon Technologies’ CODEX division, short for Cyber Offense & Defense Experts, brings together an elite team of mission-focused industry experts—known for their ability to overcome the most advanced technical challenges. The team comprises engineers of multiple disciplines, including vulnerability research, reverse engineering Computer Network Operations/Computer Network Exploitation development, hardware emulation, system engineering, data analytics, test engineering and more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
