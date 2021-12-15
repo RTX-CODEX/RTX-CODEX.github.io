@@ -4,15 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+This is the cyber blog for Raytheon Technologies CODEX (Cyber Offense and Defense Experts). We're a diverse group of mission-focused experts supporting multiple disciplines - including vulnerability research, reverse engineering, Computer Network Operations (CNO) development, hardware emulation, system engineering, data analytics, test engineering, and more. To find out about careers at CODEX please visit our [careers](https://www.raytheonintelligenceandspace.com/careers/codex) landing page.
