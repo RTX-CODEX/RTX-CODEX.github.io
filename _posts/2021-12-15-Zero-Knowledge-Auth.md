@@ -147,19 +147,19 @@ at the top and time moves downward
 
     class ZeroKnowledgeAuthClient:
     
-        p = int(‘ONE\_TIME\_PRIVATE\_KEY’)
+        p = int(‘ONE_TIME_PRIVATE_KEY’)
     
-        def \_\_init\_\_(self, username, x, randomToken):
+        def __init__(self, username, x, randomToken):
             G = “12345...cyclic...group...54321”
             self.gknot = 3
-            self.x = sha256(“a\_very\_secure\_password\_:\_123\!”)
+            self.x = sha256(“a_very_secure_password_:_123!”)
             self.y = modexp(gknot, int.from\_bytes(self.x, byteorder=’little’),
                      self.p)
             self.r = int(secrets.choice(G))
             self.T1 = modexp(gknot, self.r, self.p)
             self.a = randomToken
             self.c = self.CalculateC()
-            self.zx = self.r – (self.c \*(int.from\_bytes(self.x, ‘little’)))
+            self.zx = self.r – (self.c *(int.from_bytes(self.x, ‘little’)))
     
     	def CalculateC(self):
     	    self.c = int.from\_bytes(Sha256(str(self.Y).encode() +
@@ -167,13 +167,13 @@ at the top and time moves downward
     
     class ZeroKnowledgeAuthServer:
     
-        p = int(‘ONE\_TIME\_PRIVATE\_KEY’)
+        p = int(‘ONE_TIME_PRIVATE_KEY’)
     
-        def \_\_init\_\_(self):
+        def __init__(self):
             self.session = self.GenerateSession()
-            self.gknot = 3 \# prime number
+            self.gknot = 3 # prime number
     
-        def \_\_GenerateSession(self):
+        def __GenerateSession(self):
             self.session = secrets.randbelow(self.p)
             return self.session
     
@@ -184,37 +184,37 @@ at the top and time moves downward
             self.u = username
             self.Y = self.LookupPublicKey(self.u)
     
-            t1 = natural\_modexp((natural\_modexp(self.Y, self.c, self.p) \*
-                 natural\_modexp(gknot, self.z, self.p)), 1, self.p)
+            t1 = natural_modexp((natural_modexp(self.Y, self.c, self.p) *
+                 natural_modexp(gknot, self.z, self.p)), 1, self.p)
     
-            digest = int.from\_bytes(Sha256(str(self.Y.encode() + str(t1.encode() +
+            digest = int.from_bytes(Sha256(str(self.Y.encode() + str(t1.encode() +
                      str(self.a).encode()), byteorder=’little’)
     
             if c == digest:
-                return True \# we are successfully Authenticated
+                return True # we are successfully Authenticated
             else:
-                return False \# we failed to Authenticate
+                return False # we failed to Authenticate
     
-    def natural\_mod(a, m):
+    def natural_mod(a, m):
         “”” mod returning natural number using identity of b^e == (b^-1)^e mod m
             and identity of -a mod m = m -a mod m
         ”””
 
         invert = False
 
-        if m \< 0:
+        if m < 0:
             invert = True
             m = -m
 
         am = a % m
 
-        if am \< 0:
+        if am < 0:
             am += m
  
-        assert am \>=0 and m \>= 0
+        assert am >=0 and m >= 0
 
         if invert:
-            assert am \<= m
+            assert am <= m
             am = m – am
 
         return am
